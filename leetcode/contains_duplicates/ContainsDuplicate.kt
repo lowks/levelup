@@ -4,7 +4,6 @@ class Solution {
         nums.forEach {
           map[it] = 1 + map.getOrElse(it) { 0 }
         }
-        println(map)
         return map.values.filter { it > 1 }.size >= 1
     }
 }
