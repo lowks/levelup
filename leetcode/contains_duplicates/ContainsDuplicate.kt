@@ -1,13 +1,10 @@
-func containsDuplicate(nums []int) bool {
-  encountered := map[int]int{}
-  for _, v := range nums {
-    encountered[v] += 1
-  }
-  
-  for _,v := range encountered {
-    if v > 1 {
-      return true
+class Solution {
+    fun containsDuplicate(nums: IntArray): Boolean {
+        val map = mutableMapOf<Int, Int>()
+        nums.forEach {
+          map[it] = 1 + map.getOrElse(it) { 0 }
+        }
+        println(map)
+        return map.values.filter { it > 1 }.size >= 1
     }
-  }
-  return false
 }
