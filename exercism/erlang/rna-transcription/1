@@ -1,0 +1,14 @@
+-module(rna_transcription).
+
+-export([to_rna/1, test_version/0]).
+
+
+to_rna(Strand) -> to_rna(Strand, "").
+
+to_rna(Strand, Acc) when length(Strand) =:= 1  ->
+	Map = #{"G" => "C", "C" => "G", "T" => "A", "A" => "U"},
+	{ok, R} = maps:find(Strand, Map),
+	Acc ++ R,
+	R.
+
+test_version() -> 2.
