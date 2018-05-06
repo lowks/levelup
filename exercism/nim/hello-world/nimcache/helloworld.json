@@ -1,0 +1,10 @@
+{"compile":[
+["/Users/lowks/exercism/nim/hello-world/nimcache/helloworld.c", "clang -c  -w  -I/Users/lowks/.asdf/installs/nim/v0.18.0/lib -o /Users/lowks/exercism/nim/hello-world/nimcache/helloworld.o /Users/lowks/exercism/nim/hello-world/nimcache/helloworld.c"],
+["/Users/lowks/exercism/nim/hello-world/nimcache/stdlib_system.c", "clang -c  -w  -I/Users/lowks/.asdf/installs/nim/v0.18.0/lib -o /Users/lowks/exercism/nim/hello-world/nimcache/stdlib_system.o /Users/lowks/exercism/nim/hello-world/nimcache/stdlib_system.c"]
+],
+"link":[
+"/Users/lowks/exercism/nim/hello-world/nimcache/helloworld.o",
+"/Users/lowks/exercism/nim/hello-world/nimcache/stdlib_system.o"
+],
+"linkcmd": "clang   -o /Users/lowks/exercism/nim/hello-world/helloworld  /Users/lowks/exercism/nim/hello-world/nimcache/helloworld.o /Users/lowks/exercism/nim/hello-world/nimcache/stdlib_system.o    -ldl"
+}
